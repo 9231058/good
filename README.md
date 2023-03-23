@@ -1,15 +1,23 @@
-# good
+# Good
+
 ## Introduction
-Networking phase of Final Project of C Introduction to programming course.
+
+Networking phase of Final Project of Introduction to Programming Course (Fall 2015).
+On that year, [Iman](https://github.com/Tabrizian/) and I decided to have networking phase for our final project,
+which was a game that can be played in multiplayer model.
+
 ## C Socket Programming in MinGW
-For using MinGW in order to socket programming you can use almost all of
-BSD socket functions in your program and at the end you must add thses
-lines of code in order to load winsock dll.
+
+For those using MinGW as their socket programming library, they can use almost all of BSD socket
+functions in their program and at the end they must add these lines of code to load WINSock DLL.
+
 ```c
-	WSADATA wsaData;
-	WSAStartup(MAKEWORD(2, 2), &wsaData);
+WSADATA wsaData;
+WSAStartup(MAKEWORD(2, 2), &wsaData);
 ```
-and use following command for compiling.
-```sh
+
+And use following command for compiling:
+
+```bash
 gcc main.c  -lws2_32
 ```
